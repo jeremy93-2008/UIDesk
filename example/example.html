@@ -1,0 +1,112 @@
+<html>
+    <head>
+		<meta charset="utf-8" />
+		<title>UI-Desk</title>
+		<link rel='stylesheet' href='css/desk.css' />
+		<script type="text/javascript" src="js/desk.js"></script>
+    </head>
+    <body>
+	<div class="ui-main">
+		<div class="ui-header">
+			<h1>UI Desktop</h1>
+			<div class="ui-menu">
+				<ul>
+					<li>Archivo
+						<ul class="ui-submenu">
+							<li>Nuevo</li>
+							<li class="ui-arrow">Abrir
+								<ul class="ui-submenu">
+									<li>Abrir Fichero</li>
+									<li>Abrir URL</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>Edición</li>
+					<li>Proyecto</li>
+				</ul>
+			</div>
+		</div>
+		<div class="ui-body">
+			<div class="ui-button">Un botón
+				<div class="ui-tooltip">Este botón es un ejemplo</div>
+			</div>
+			<div id="sel" class="ui-button ui-night">Un botón
+				<div class="ui-poptip">
+					<h1>Botón negro</h1>
+					<p>El botón negro es un botón ancestral pasado de generación en generación</p>
+					<p>Los primeros rastros de su aparición remonta a la época de los egipcios</p>
+				</div>
+			</div>
+			<div class="ui-button ui-confirm">Un botón</div>
+			<div class="ui-button ui-cancel">Un botón</div>
+			<div class="ui-button ui-warn">Un botón</div>
+			<div class="ui-button ui-info">Un botón</div>
+			<div class="ui-zone">
+				<h1>Formulario</h1>
+				<input type="text" class="ui-text" placeholder="Un texto" />
+				<textarea class="ui-text ui-no-shadow" ></textarea>
+				<select class="ui-text">
+					<option>Alameda</option>
+					<option>Antequera</option>
+					<option>Archidona</option>
+				</select>
+			</div>
+			<div class="ui-btngroup">
+				<div class="ui-button ui-info">Un botón</div>
+				<div class="ui-button ui-info">Un botón 1</div>
+				<div class="ui-button ui-info">Un botón 2</div>
+				<div class="ui-button ui-info">Un botón 3</div>
+			</div>
+			<div id="showInfo" class="ui-button ui-confirm">Mostrar/Esconder</div>
+			<div class="ui-collapse ui-night #showInfo">
+				<p>Esto es un mensaje colapsado</p>
+			</div>
+			<div class="ui-pagination ui-night ui-length(2)">
+				<div class="ui-zone ui-shadow">Esto es una <span class='ui-title'>alerta</span></div>
+				<div class="ui-zone ui-night">Esto es una <span class='ui-title'>alerta</span></div>
+				<div class="ui-zone ui-confirm">Esto es una <span class='ui-title'>alerta</span></div>
+				<div class="ui-zone ui-cancel">Esto es una <span class='ui-title'>alerta</span></div>
+				<div class="ui-zone ui-warn">Esto es una <span class='ui-title'>alerta</span></div>
+				<div class="ui-zone ui-info">Esto es una <span class='ui-title'>alerta</span></div>
+			</div>
+			<div class="ui-zone ui-cancel ui-timeout">Esto es una <span class='ui-title'>alerta</span> y va a desaparecer</div>
+			<div class="ui-wizard ui-unordered ui-night">
+				<div class="ui-step ui-shadow">
+					<h1>Introducción</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+					Phasellus hendrerit justo sed eros porttitor, at feugiat lorem consequat. 
+					Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+					Praesent vitae metus fringilla, facilisis ipsum non, varius odio. Suspendisse potenti. 
+					Curabitur eu ultricies mauris, quis aliquet urna.</p>
+					<button class="ui-button ui-warn ui-nextstep">Siguiente</button>
+				</div>
+				<div class="ui-step">
+					<h1>Instalación</h1>
+					<p>Nullam id velit a erat auctor cursus ut eu ex. 
+					Duis non aliquet felis. Nam sollicitudin nisi ac arcu pellentesque, eget tempus nisl dignissim. 
+					Etiam quis lacus ut nulla consequat faucibus. 
+					Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+					Donec efficitur nibh porta est eleifend tincidunt. Sed sed laoreet metus.</p>
+					<button class="ui-button ui-confirm ui-nextstep">Siguiente</button>
+				</div>
+				<div class="ui-step">
+					<h1>Finalización</h1>
+					<p>Morbi scelerisque diam est, nec volutpat mauris semper sed. 
+					Integer vitae varius massa. 
+					Nullam lobortis metus id libero suscipit, eu ultricies diam euismod. 
+					Curabitur iaculis nisi sit amet ante tempus, ut tincidunt tellus maximus. 
+					Nam et blandit mi, eget maximus ante.</p>
+					<button class="ui-button ui-info ui-nextstep">Siguiente</button>
+				</div>
+			</div>
+			<div class="ui-modal #sel">
+				<h1>Información</h1>
+				<p>Hola a todos</p>
+				<div class="ui-button ui-confirm ui-close">Un botón</div>
+			</div>
+			<div class="ui-toast ui-duration(6)">Esto es un mensaje de información que desaparecerá</div>
+		</div>
+	</div>
+    </body>
+</html>

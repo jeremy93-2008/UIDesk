@@ -3,6 +3,7 @@ Welcome to the UIDesk Documentation, here you can find all the functionality of 
 
 To begin you need to know, that exist three different type of object in UIDesk according to functionality of them. Containers, Components, Utilities, Styles.
 This type is specified in __class atribute__ of each element.
+
 ## Containers
 It's a type of object that contain all others object in your website, in UIDesk you have five container.
 
@@ -149,7 +150,7 @@ This component generate pagination from div's inside the pagination container.
 
 It's generate a pagination automatically, clickable to show divs of this page.
 
-### ui-length(number)
+#### ui-length(number)
 With this attribute, you can choose the number of element showed by page.
 
 
@@ -181,4 +182,67 @@ With this attribute attach the close event for the parent modal.
 #### ui-closebutton
 With this attribute in a empty element, generate a close button (X) in modal.
 
-* You can change colors of background with Styles above.
+### ui-timeout (Not Style) (only CSS)
+```html
+<div class="ui-timeout [ui-duration(6)]">Esto es una <span class='ui-title'>alerta</span> y va a desaparecer</div>
+```
+This attribute attach to a element the animation to disappear after a fixed time. By default 4s.
+
+#### ui-duration(number) (need JS)
+With this attribute you can choose how many time this div will be here before disappear.
+
+## Styles (Only CSS)
+All classes that change appearance of elements in UIDesk.
+
+### h1 in ui-zone,ui-step,ui-modal,ui-poptip Or ui-title
+To put a title inside this elemens, you only need to invoke h1 tag or anyone tag with ui-title class.
+
+### ui-night
+```html
+<div class="ui-button ui-night">A button</div>
+```
+Change style to a dark one for all the elements class allowed.
+### ui-confirm
+```html
+<div class="ui-button ui-night">A button</div>
+```
+Change style to a green one for all the elements class allowed.
+### ui-cancel
+```html
+<div class="ui-button ui-cancel">A button</div>
+```
+Change style to a red one for all the elements class allowed.
+### ui-warn
+```html
+<div class="ui-button ui-warn">A button</div>
+```
+Change style to a yellow one for all the elements class allowed.
+### ui-info
+```html
+<div class="ui-button ui-info">A button</div>
+```
+Change style to a blue one for all the elements class allowed.
+
+### ui-shadow
+```html
+<div class="ui-button ui-shadow">A button</div>
+```
+Change style to insert a outer shadow inside element.
+### ui-inner-shadow
+```html
+<div class="ui-button ui-inner-shadow">A button</div>
+```
+Change style to insert a inset shadow inside element.
+### ui-noshadow
+```html
+<div class="ui-button ui-noshadow">A button</div>
+```
+Change style to a remove all shadow in the element.
+### ui-nofocus
+```html
+<div class="ui-button ui-nofocus">A button</div>
+```
+Change style to doesn't use js effect when click in a ui-button.
+
+
+* You can change colors of background, font color,etc... with Styles above.

@@ -59,6 +59,7 @@ body
 {
 	position:absolute;
 	margin-top:10px;
+	user-select:none;
 }
 .ui-menu>ul
 {
@@ -166,6 +167,7 @@ body
 .ui-button
 {
 	display: inline-block;
+	user-select: none;
 	padding:5px 15px;
 	outline: none;
 	border:solid 1px lightgrey;

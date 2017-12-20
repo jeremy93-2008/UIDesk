@@ -38,6 +38,17 @@ or
 ```
 It's generate a container showed only when you click in a specific elements, with a outer shadow and a grey gradient background*.
 
+### ui-sidebar (Styles Allowed) (Both CSS and JS)
+```html
+<div class="ui-sidebar"></div> - Begin JS code to show it -
+or
+<div class="ui-sidebar #ID_of_the_element_that_active_it"></div>
+```
+It's generate a sidebar fixed in the left or right of the browser, with a outer shadow and a grey gradient background*.
+
+#### ui-smallbar
+Attribute that allow you create a 'ui-bar' div class inside 'ui-sidebar', that will be permanently visible
+
 ## Components
 It's a type of objects with its own styles, with user interaction.
 

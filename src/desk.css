@@ -463,12 +463,6 @@ div:hover>.ui-poptip:hover
 	box-shadow: 0px 0px 10px #c1c1c1;
 	border-radius:5px;
 }
-.ui-wizard.ui-night > .ui-step,.ui-wizard.ui-night > .stepProcess .stepCircle,.ui-collapse.ui-night
-{
-	background: linear-gradient(to top,#333,#444);
-	border-color:#666;
-	color:white;		
-}
 .stepProcess
 {
 	margin-top:10px;
@@ -491,28 +485,82 @@ div:hover>.ui-poptip:hover
 	height:1px;
 	background: #BBB;
 }
+.ui-sidebar
+{
+	display:block;
+	position:fixed;
+	height:100%;
+	width:150px;
+	padding:5 10;
+	border:solid 1px lightgray;
+	box-shadow: 0px 0px 10px #c1c1c1;
+	top:0;
+	left:0;
+	background: linear-gradient(to bottom,#EEE,#DDD);
+	border: solid 1px lightgray;
+	margin-left:-210px;
+	transition: margin .4s ease-in-out,right .4s ease-in-out;
+	z-index:80;
+}
+.ui-sidebar.ui-right
+{
+	float:right;
+	left:initial;
+	right:-210px;
+}
+.ui-sidebar.ui-show,.ui-sidebar.ui-smallbar.ui-show
+{
+	margin-left:0;
+	right:0;
+}
+.ui-sidebar.ui-smallbar
+{
+	margin-left:-130px;
+}
+.ui-sidebar.ui-smallbar.ui-show > .ui-bar
+{
+	opacity:0;
+}
+.ui-sidebar.ui-smallbar > .ui-bar
+{
+	opacity:1;
+	position:fixed;
+	left:2;
+	transition: opacity .4s ease-out;
+}
+.ui-wizard.ui-night > .ui-step,.ui-wizard.ui-night > .stepProcess .stepCircle,.ui-collapse.ui-show.ui-night,
+.ui-sidebar.ui-night
+{
+	background: linear-gradient(to top,#333,#444);
+	border-color:#666;
+	color:white;		
+}
 .ui-zone.ui-confirm,.ui-toast.ui-confirm,.ui-header.ui-confirm,.ui-modal.ui-confirm,.ui-poptip.ui-confirm,
-.ui-wizard.ui-confirm > .ui-step,.ui-wizard.ui-confirm > .stepProcess .stepCircle,.ui-collapse.ui-confirm
+.ui-wizard.ui-confirm > .ui-step,.ui-wizard.ui-confirm > .stepProcess .stepCircle,.ui-collapse.ui-confirm,
+.ui-sidebar.ui-confirm
 {
 	background: linear-gradient(to bottom,#6ce27f,#3fb353);
 	border-color:#1e792e;
 	color:white;
 }
 .ui-zone.ui-cancel,.ui-toast.ui-cancel,.ui-header.ui-cancel,.ui-modal.ui-cancel,.ui-poptip.ui-cancel,
-.ui-wizard.ui-cancel > .ui-step,.ui-wizard.ui-cancel > .stepProcess .stepCircle,.ui-collapse.ui-cancel
+.ui-wizard.ui-cancel > .ui-step,.ui-wizard.ui-cancel > .stepProcess .stepCircle,.ui-collapse.ui-show.ui-cancel,
+.ui-sidebar.ui-cancel
 {
 	background: linear-gradient(to bottom,#f14040,#961d1d);
 	border-color:#6b0000;
 	color:white;
 }
 .ui-zone.ui-warn,.ui-toast.ui-warn,.ui-header.ui-warn,.ui-modal.ui-warn,.ui-poptip.ui-warn,
-.ui-wizard.ui-warn > .ui-step,.ui-wizard.ui-warn > .stepProcess .stepCircle,.ui-collapse.ui-warn
+.ui-wizard.ui-warn > .ui-step,.ui-wizard.ui-warn > .stepProcess .stepCircle,.ui-collapse.ui-show.ui-warn,
+.ui-sidebar.ui-warn
 {
 	background: linear-gradient(to bottom,#f3e165,#d0c904);
 	border-color: #a59d0e;
 }
 .ui-zone.ui-info,.ui-toast.ui-info,.ui-header.ui-info,.ui-modal.ui-info,.ui-poptip.ui-info,
-.ui-wizard.ui-info > .ui-step,.ui-wizard.ui-info > .stepProcess .stepCircle,.ui-collapse.ui-info
+.ui-wizard.ui-info > .ui-step,.ui-wizard.ui-info > .stepProcess .stepCircle,.ui-collapse.ui-show.ui-info,
+.ui-sidebar.ui-info
 {
 	background: linear-gradient(to bottom,#6cb6e2,#2f8cc3);
 	border-color:#0e5884;
@@ -540,16 +588,20 @@ div:hover>.ui-poptip:hover
 .ui-collapse
 {
 	max-width:150px;
-	min-height:50px;
-	margin: 5 0;
-	display:none;
+    min-height:0px;
+	height:0px;
 	opacity:0;
+	padding:0;
+	transition: height .4s ease-in-out;
 }
-.aparece
-{
-	animation: aparece .6s ease-in-out;
-	animation-fill-mode: forwards;
-	display:block;
+.ui-collapse.ui-show
+{	
+	opacity:1;
+	margin: 5 0;
+	min-height:50px;
+	height:50px;
+	padding: 0px 40px 20px 40px;
+	transition: opacity .4s ease-in-out, height .4s ease-in-out;
 }
 .desaparece
 {

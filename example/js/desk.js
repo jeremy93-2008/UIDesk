@@ -86,12 +86,12 @@ function loadUIFunc()
 			obj.addEventListener("click",function()
 			{
 				let contenedor = document.querySelector("*[openby="+this.getAttribute("open")+"]");
-				if(contenedor.className.indexOf("aparece") == -1)
+				if(contenedor.className.indexOf("ui-show") != -1)
 				{
-					contenedor.className += " aparece";
+					contenedor.className = contenedor.className.replace(" ui-show","");
 				}else
 				{
-					contenedor.className = contenedor.className.replace(" aparece","");
+					contenedor.className += " ui-show";
 				}
 			});
 		}
@@ -241,6 +241,30 @@ function loadUIFunc()
 			pageContainer.appendChild(pageInside);
 		}
 		element.appendChild(pageContainer);
+	}
+	let sidebarActiveList = document.querySelectorAll(elemento+".ui-sidebar");
+	for(let element of sidebarActiveList)
+	{
+		let positionStart = element.className.indexOf("#");
+		let positionEnd = (element.className.indexOf(" ",positionStart)==-1)?element.className.length:element.className.indexOf(" ",positionStart);
+		if(positionStart != -1)
+		{
+			element.setAttribute("openBy","sideBar"+parseInt(Math.random()*1000));
+			let name = element.className.substring(positionStart,positionEnd);
+			let obj = document.querySelector(name);
+			obj.setAttribute("open",element.getAttribute("openBy"));
+			obj.addEventListener("click",function()
+			{
+				let contenedor = document.querySelector("*[openby="+this.getAttribute("open")+"]");
+				if(contenedor.className.indexOf("ui-show") != -1)
+				{
+					contenedor.className = contenedor.className.replace(" ui-show","");
+				}else
+				{
+					contenedor.className += " ui-show";
+				}
+			});
+		}
 	}
 }
 function UIDeskLoadFunc(IDname)

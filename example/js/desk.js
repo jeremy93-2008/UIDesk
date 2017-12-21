@@ -56,6 +56,7 @@ function loadUIFunc()
 				if(contenedor.parentNode.innerHTML.indexOf("class=\"ui-backmodal\"") == -1)
 					contenedor.parentNode.appendChild(back);
 				contenedor.style.display = "block";
+				window.setTimeout(function(){contenedor.style.marginTop = "0px";contenedor.style.opacity = "1";},20)
 				document.querySelector(".ui-backmodal").style.display = "block";
 			});
 		}
@@ -67,6 +68,8 @@ function loadUIFunc()
 				cerrar.addEventListener("click",function()
 				{
 					this.parentNode.style.display = "none";
+					this.parentNode.style.opacity = "0";
+					this.parentNode.style.marginTop = "-15px";
 					document.querySelector(".ui-backmodal").style.display = "none";
 				});
 			}
